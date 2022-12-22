@@ -1,6 +1,35 @@
 <template>
   <div class="home">
-    <TextContainer>Lorem Ipsum</TextContainer>
+    <TextContainer class="text-container">
+      <h2>About me</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem minus
+        at, nobis ut beatae incidunt quos a rerum et odit esse ullam sit aliquam
+        vel! Doloribus provident magnam accusamus architecto velit a dolores
+        explicabo rerum aperiam unde quas sunt magni corrupti, quis vitae vero.
+        Explicabo adipisci perferendis pariatur dolores illum!
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem minus
+        at, nobis ut beatae incidunt quos a rerum et odit esse ullam sit aliquam
+        vel! Doloribus provident magnam accusamus architecto velit a dolores
+        explicabo rerum aperiam unde quas sunt magni corrupti, quis vitae vero.
+        Explicabo adipisci perferendis pariatur dolores illum!
+      </p>
+    </TextContainer>
+    <TextContainer>
+      <h2>My Skills</h2>
+      <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+      </ul>
+    </TextContainer>
+    <TextContainer>
+      <h2>Contact me!</h2>
+      <p>johndoe@gmail.com</p>
+    </TextContainer>
   </div>
 </template>
 
@@ -15,3 +44,18 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.home {
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+  .text-container {
+    flex: 1 1 0px;
+    min-width: 45%;
+    background-color: $test-variable;
+    text-align: justify;
+    padding: 1rem;
+  }
+}
+</style>
