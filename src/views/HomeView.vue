@@ -48,12 +48,12 @@ export default {
 <style lang="scss" scoped>
 .home {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
   flex-flow: row wrap;
   .text-container {
     flex: 1 1 0px;
     min-width: 45%;
-    background-color: $test-variable;
+    background-color: $burgundy;
     text-align: justify;
     padding: 1rem;
   }
