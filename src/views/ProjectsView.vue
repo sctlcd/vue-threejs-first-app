@@ -8,5 +8,6 @@ export default {};
 
 <style lang="scss" scoped>
 .projects-section {
+  color: blue;
 }
 </style>
