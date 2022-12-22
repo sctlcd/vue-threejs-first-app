@@ -8,13 +8,19 @@
 </template>
 
 <style lang="scss">
+html {
+  background-color: $black;
+  margin: 1rem;
+  padding: 0rem;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  // background-color: $test-variable;
+  color: $off-white;
+  background-color: $black;
 }
 
 nav {
@@ -22,11 +28,15 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: $off-white;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: $grey;
     }
+  }
+
+  a:hover {
+    color: $light-burgundy;
   }
 }
 </style>
