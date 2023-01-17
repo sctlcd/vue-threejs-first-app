@@ -1,47 +1,36 @@
 <template>
   <div class="home">
-    <TextContainer class="text-container">
-      <h2>About me</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem minus
-        at, nobis ut beatae incidunt quos a rerum et odit esse ullam sit aliquam
-        vel! Doloribus provident magnam accusamus architecto velit a dolores
-        explicabo rerum aperiam unde quas sunt magni corrupti, quis vitae vero.
-        Explicabo adipisci perferendis pariatur dolores illum!
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem minus
-        at, nobis ut beatae incidunt quos a rerum et odit esse ullam sit aliquam
-        vel! Doloribus provident magnam accusamus architecto velit a dolores
-        explicabo rerum aperiam unde quas sunt magni corrupti, quis vitae vero.
-        Explicabo adipisci perferendis pariatur dolores illum!
-      </p>
-    </TextContainer>
-    <TextContainer>
-      <h2>My Skills</h2>
-      <ul>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Lorem ipsum dolor sit amet.</li>
-      </ul>
-    </TextContainer>
-    <TextContainer>
-      <h2>Contact me!</h2>
-      <p>johndoe@gmail.com</p>
-    </TextContainer>
+    <ImageContainer class="image-container">
+      <img :alt="image" :src="image" />
+      <p>Hi. I'm Lucinda, a Frontend developer.</p>
+      <p>Welcome to my portfolio!</p>
+    </ImageContainer>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import TextContainer from "@/components/TextContainer.vue";
+import ImageContainer from "@/components/ImageContainer.vue";
 
 export default {
   name: "HomeView",
   components: {
-    TextContainer,
+    ImageContainer,
   },
+  mounted: function () {
+    if (this.source) {
+      //is it empty
+      this.image = this.source; //replace placeholder
+    }
+    this.loading = false;
+  },
+  data() {
+    return {
+      image: "https://picsum.photos/id/237/400/600", //url for placeholder image
+      loading: true,
+    };
+  },
+  props: ["source"],
 };
 </script>
 
@@ -50,12 +39,11 @@ export default {
   display: flex;
   gap: 1.5rem;
   flex-flow: row wrap;
-  .text-container {
-    flex: 1 1 0px;
-    min-width: 45%;
+  .image-container {
     background-color: $burgundy;
-    text-align: justify;
+    text-align: center;
     padding: 1rem;
+    margin: 0 auto;
   }
 }
 </style>
