@@ -1,9 +1,13 @@
 <template>
-  <div class="projects-section">This is the Projects view</div>
+  <div class="projects-section">
+    <ShowcaseContainer></ShowcaseContainer>
+  </div>
 </template>
 
 <script>
-export default {};
+import ShowcaseContainer from "@/components/ShowcaseContainer.vue";
+
+export default { components: { ShowcaseContainer } };
 </script>
 
 <style lang="scss" scoped>
