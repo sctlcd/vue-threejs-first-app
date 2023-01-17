@@ -47,7 +47,7 @@ export default {
           ],
           urlText: "Github",
           url: "https://github.com/sctlcd/react-threejs-minecraft",
-          img: "https://picsum.photos/id/237/400/500",
+          img: "https://picsum.photos/id/19/400/500",
         },
         {
           title: "Three.js Moon",
