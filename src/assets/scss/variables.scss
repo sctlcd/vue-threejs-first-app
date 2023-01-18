@@ -5,3 +5,11 @@ $white: white;
 $off-white: #f3f3f3;
 $slate: #161617;
 $grey: rgb(157, 165, 195);
+
+#scene-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
