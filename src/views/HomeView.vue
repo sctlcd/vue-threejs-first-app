@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <ImageContainer class="image-container">
-      <img :alt="image" :src="image" />
-      <p>Hi. I'm Lucinda, a Frontend developer.</p>
+      <p>Hi. My name is Lucinda, I'm a Frontend developer.</p>
       <p>Welcome to my portfolio!</p>
+      <img :alt="image" :src="image" />
     </ImageContainer>
   </div>
 </template>
@@ -42,7 +42,7 @@ export default {
   .image-container {
     background-color: $burgundy;
     text-align: center;
-    padding: 1rem;
+    padding: 0 1rem 1rem;
     margin: 0 auto;
   }
 }
